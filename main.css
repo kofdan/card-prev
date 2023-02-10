@@ -1,0 +1,131 @@
+:root {
+  --cark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+/* 
+- Mobile: 375px
+
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Fraunces", sans-serif;
+
+  font-size: 14px;
+}
+img {
+  width: 100%;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 75px 0;
+  background-color: var(--cream);
+}
+.card {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--dark-grayish-blue);
+  text-align-last: left;
+}
+
+.card__desc {
+  padding: 25px;
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+.card__img__prev {
+  max-width: 450px;
+  width: 100%;
+  max-height: 400px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+}
+.card__title {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+}
+.card__desc__title {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  font-size: 26px;
+  padding: 25px 0;
+}
+.card__desc_text {
+  color: var(--dark-grayish-blue);
+}
+
+.price {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.updated__price {
+  color: var(--cark-cyan);
+  font-size: 26px;
+}
+.old__price {
+  text-decoration: line-through;
+}
+.card__btn img {
+  width: 15px;
+  padding-right: 15px;
+}
+.card__btn {
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--cark-cyan);
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0;
+  }
+  .card__img__prev {
+    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
+    max-width: 375px;
+  }
+  .card__desc {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 375px;
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+  }
+  .card__desc_text {
+    padding: 0 15px;
+  }
+  .card__btn {
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+  }
+}
